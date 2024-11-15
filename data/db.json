@@ -1,0 +1,28 @@
+{
+  "headerData": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "About",
+      "path": "/About"
+    },
+    {
+      "name": "Work",
+      "path": "/Work"
+    },
+    {
+      "name": "Life",
+      "path": "/Life"
+    },
+    {
+      "name": "Blog",
+      "path": "/Blog"
+    },
+    {
+      "name": "Contact",
+      "path": "/Contact"
+    }
+  ]
+}

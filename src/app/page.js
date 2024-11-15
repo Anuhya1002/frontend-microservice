@@ -1,11 +1,15 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import React from "react";
+import HeroBanner from "./Components/HeroBanner";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../../src/app/globals.css";
 
-export default function Home() {
+const App = () => {
   return (
-   <div className="container">
-    <h1>Home page</h1>
-    <p>Prtofolio</p>
-   </div>
+    <>
+      <HeroBanner />
+    </>
   );
-}
+};
+
+export default App;
