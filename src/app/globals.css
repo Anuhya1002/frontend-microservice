@@ -48,15 +48,16 @@ li {
   color: #fd853a;
 }
 
-@media (max-width: 567px) {
+@media (max-width: 375px) {
   .typing-text {
-    font-size: 35px;
+    font-size: 30px;
+    text-align: center;
   }
 }
 
 .hello-btn {
   align-self: stretch;
-  border-radius: 38.235px;
+  border-radius: 38px;
   border: 1.275px solid var(--Gray-900, #171717);
   background-color: rgba(255, 255, 255, 0.1);
   min-height: 45px;
@@ -80,8 +81,16 @@ li {
   font-weight: 500;
 }
 
+@media (max-width: 375px) {
+  .main-banner-text {
+    font-size: 50px;
+    text-align: center;
+  }
+}
+
 header {
   margin: 20px 0px 20px;
+  
 }
 
 .navBar {
@@ -124,7 +133,6 @@ header {
 }
 
 .herobanner {
-  border: 2px solid black;
   padding: 20px 0px 0px 0px;
   position: relative;
   width: 100%;
@@ -168,7 +176,7 @@ header {
 
 .circles-container {
   position: absolute;
-  bottom: -50%;
+  /* bottom: -50%; */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -309,4 +317,221 @@ header {
   .subtitle {
     font-size: 1.5rem;
   }
+}
+
+.hero-section {
+  min-height: 100vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.backdrop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.hero-content {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  /* background: rgba(0, 0, 0, 0.6); */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: absolute; /* Position hero-content on top of the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+}
+
+.toggle-wrapper {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 30px;
+  margin-bottom: 32px;
+  font-size: 20px;
+}
+
+/* Custom Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  background-color: #4a4a4a;
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.switch-label {
+  color: white;
+  font-size: 14px;
+  margin-left: 12px;
+}
+
+.hero-title {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+  font-size: 26px;
+  color: white;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.try-button,
+.demo-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.try-button {
+  background-color: black;
+  color: white;
+}
+
+.try-button:hover {
+  background-color: #333;
+}
+
+.demo-button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.demo-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+.no-card-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin: 20px;
+    padding: 24px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .try-button,
+  .demo-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.form-check-input:checked {
+  background-color: #fd853a !important;
+  border-color: #ededed !important;
+}
+
+.image-container {
+  overflow: hidden;
+  background-size: cover;
+  max-width: 100%;
+  background-position: "center";
+  background-repeat: "no-repeat";
+  opacity: 0.8;
+  position: relative;
+  height: 450px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.custom-switch{
+  color: white;
 }
