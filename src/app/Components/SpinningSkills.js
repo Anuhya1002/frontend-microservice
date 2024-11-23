@@ -131,7 +131,8 @@ const SpinningSkills = () => {
           data.angle,
           data.translateY,
           data.rotationClass,
-          index + 1
+          index + 1,
+          key={key}
         )
       )}
     </div>
