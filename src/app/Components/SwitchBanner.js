@@ -20,7 +20,13 @@ export default function SwitchBanner() {
     <section className="switchbanner">
       <Container>
         <div className="image-container">
-          <Image src="/images/bannerimage.png" alt="switch banner" />
+          <Image
+            src="/images/bannerimage.png"
+            alt="switch banner"
+            width={450}
+            height={400}
+            priority
+          />
           <div className="hero-content">
             <div className="toggle-wrapper">
               <Form.Check
@@ -29,7 +35,9 @@ export default function SwitchBanner() {
                 label="I'm technical"
                 checked={isTechnical}
                 onChange={() => setIsTechnical(!isTechnical)}
-                className="custom-switch"
+                className={`custom-switch ${
+                  isTechnical ? "light-bg-color" : "dark-bg-color"
+                } $`}
               />
             </div>
             <h1 className="hero-title">
@@ -43,7 +51,7 @@ export default function SwitchBanner() {
                 : content.nonTechnical.subtitle}
             </p>
             <div className="button-group">
-              <Button variant="dark" className="try-button">
+              <Button className="try-button">
                 Try for free
                 <svg
                   className="arrow-icon"
@@ -58,6 +66,13 @@ export default function SwitchBanner() {
               <Button variant="outline-light" className="demo-button">
                 Book a demo
               </Button>
+            </div>
+            <div className="dino-game-container">
+              <iframe
+                src="https://chromedino.com"
+                className="dino-game"
+                title="Dino Game"
+              />
             </div>
           </div>
         </div>
