@@ -48,7 +48,7 @@ li {
   color: #fd853a;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .typing-text {
     font-size: 30px;
     text-align: center;
@@ -81,7 +81,7 @@ li {
   font-weight: 500;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .main-banner-text {
     font-size: 50px;
     text-align: center;
