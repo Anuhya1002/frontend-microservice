@@ -4,11 +4,11 @@ const SpinningSkills = () => {
   const circleData = {
     circle1: {
       items: [
-        "Kora",
-        "Stella",
-        "Dacher",
-        "Whimsy",
-        "Aura",
+        "HTML5",
+        "CSS3",
+        "React.js",
+        "Next.js",
+        "Typescript",
         "Ito",
         "Dacher",
         "Whimsy",
@@ -125,16 +125,17 @@ const SpinningSkills = () => {
 
   return (
     <div className="circles-container">
-      {Object.entries(circleData).map(([key, data], index) =>
-        renderCircle(
-          data.items,
-          data.angle,
-          data.translateY,
-          data.rotationClass,
-          index + 1,
-          key={key}
-        )
-      )}
+      {Object.entries(circleData).map(([key, data], index) => (
+        <React.Fragment key={key}>
+          {renderCircle(
+            data.items,
+            data.angle,
+            data.translateY,
+            data.rotationClass,
+            index + 1
+          )}
+        </React.Fragment>
+      ))}
     </div>
   );
 };
