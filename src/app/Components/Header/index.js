@@ -8,7 +8,8 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="container">
+    <header>
+      <div className="container">
       <div className="navBar d-flex align-items-center justify-content-center">
         <ul className="d-flex mb-0">
           {Headerdata.headerData.map((item, index) => (
@@ -22,6 +23,7 @@ const Header = () => {
             </li>
           ))}
         </ul>
+      </div>
       </div>
     </header>
   );
