@@ -103,6 +103,11 @@ header {
   gap: 28px;
   flex-wrap: wrap;
   padding: 10px;
+
+
+}
+.mobile-list{
+  display: none;
 }
 
 .navItem {
@@ -593,17 +598,164 @@ input:checked + .slider:before {
 
 @media (max-width: 768px) {
   .hero-content {
-   padding: 10px;
-    margin: 0px ;
+    padding: 10px;
+    margin: 0px;
   }
   .image-container img {
     height: inherit;
-
   }
 
-  .toggle-wrapper{
+  .toggle-wrapper {
     margin-bottom: 12px;
     margin-top: 20px;
     font-size: 16px;
   }
 }
+
+header {
+  background-color: #ffe4e1;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Review Card Styles */
+.review-card {
+  width: 70%;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-right: 24px;
+  height: fit-content;
+}
+
+/* Header */
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.review-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-name {
+  font-weight: 500;
+  color: #fd853a;
+  font-size: 1.5rem;
+}
+
+/* Star Ratings */
+.review-stars {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.star-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.star-filled {
+  color: #facc15;
+  fill: #facc15;
+}
+
+.star-empty {
+  color: var(--muted-foreground);
+}
+
+/* Review Text */
+.review-text {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  word-break: break-word;
+}
+
+/* Review Section */
+.reviews-section {
+  background-color: #ffe4e1;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reviews Container */
+.reviews-container {
+  width: 100%;
+  max-width: 90%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Reviews Title */
+.reviews-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .reviews-title {
+    font-size: 24px;
+  }
+
+  .review-card {
+    max-width: 100%;
+  }
+
+  .review-name {
+    font-size: 1.25rem;
+  }
+
+  .review-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Fix for Slick Carousel Overlap */
+.slick-slider {
+  overflow: hidden;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+
